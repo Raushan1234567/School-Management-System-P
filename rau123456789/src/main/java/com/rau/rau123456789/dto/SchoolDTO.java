@@ -6,11 +6,14 @@ import lombok.Data;
 
 @Data
 public class SchoolDTO {
+
+    private Long id;
     private String name;
     private String address;
 
     @Builder
-    public SchoolDTO(String name, String address) {
+    public SchoolDTO(Long id, String name, String address) {
+        this.id=id;
         this.name = name;
         this.address = address;
     }
